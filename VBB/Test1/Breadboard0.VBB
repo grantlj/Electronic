@@ -1,0 +1,252 @@
+<breadboard type="Breadboard">
+<GX>
+<XOFFSET>-14</XOFFSET>
+<YOFFSET>56</YOFFSET>
+<ZOOM>0.894436519258203</ZOOM>
+</GX>
+	<properties>
+	</properties>
+
+	<projectproperties>
+		<webroot></webroot>
+		<startuppage></startuppage>
+		<launchujserver></launchujserver>
+	</projectproperties>
+	<components>
+		<component>
+			<X>252</X>
+			<Y>0</Y>
+			<rotation>0</rotation>
+			<locked>False</locked>
+			<class>com.virtualbreadboard.sim.components.uVM.containers.ArduinoStandard</class>
+				<properties>
+					<property>
+						<name>Application</name>
+						<value>[Test1]Source0.SRC</value>
+						<description>Application to execute (App)</description>
+					</property>
+					<property>
+						<name>Configuration</name>
+						<value></value>
+						<description>Application Configuration (xml)</description>
+					</property>
+					<property>
+						<name>eeprom</name>
+						<value>00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,</value>
+						<description>implements the persistance of the eeprom between files(512)</description>
+					</property>
+					<property>
+						<name>left</name>
+						<value>252</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>top</name>
+						<value>0</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>orientation</name>
+						<value>0</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>FabID</name>
+						<value></value>
+						<description></description>
+					</property>
+				</properties>
+
+		</component>
+		<component>
+			<X>392</X>
+			<Y>0</Y>
+			<rotation>0</rotation>
+			<locked>False</locked>
+			<class>com.virtualbreadboard.sim.components.userio.LedArray</class>
+				<properties>
+					<property>
+						<name>Colors</name>
+						<value>RRRR</value>
+						<description>The colors of the LED</description>
+					</property>
+					<property>
+						<name>left</name>
+						<value>392</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>top</name>
+						<value>0</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>orientation</name>
+						<value>0</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>FabID</name>
+						<value></value>
+						<description></description>
+					</property>
+				</properties>
+
+		</component>
+		<component>
+			<X>742</X>
+			<Y>168</Y>
+			<rotation>0</rotation>
+			<locked>False</locked>
+			<class>com.virtualbreadboard.sim.components.userio.SlidePOT</class>
+				<properties>
+					<property>
+						<name>pot</name>
+						<value>0</value>
+						<description>Potentiometer slide position</description>
+					</property>
+					<property>
+						<name>left</name>
+						<value>742</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>top</name>
+						<value>168</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>orientation</name>
+						<value>0</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>FabID</name>
+						<value></value>
+						<description></description>
+					</property>
+				</properties>
+
+		</component>
+		<component>
+			<X>644</X>
+			<Y>154</Y>
+			<rotation>0</rotation>
+			<locked>False</locked>
+			<class>OpenVBBLibVB.Circuit.VDD</class>
+				<properties>
+					<property>
+						<name>left</name>
+						<value>644</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>top</name>
+						<value>154</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>orientation</name>
+						<value>0</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>FabID</name>
+						<value></value>
+						<description></description>
+					</property>
+				</properties>
+
+		</component>
+		<component>
+			<X>812</X>
+			<Y>168</Y>
+			<rotation>0</rotation>
+			<locked>False</locked>
+			<class>OpenVBBLibVB.Circuit.VSS</class>
+				<properties>
+					<property>
+						<name>left</name>
+						<value>812</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>top</name>
+						<value>168</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>orientation</name>
+						<value>0</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>FabID</name>
+						<value></value>
+						<description></description>
+					</property>
+				</properties>
+
+		</component>
+		<component>
+			<X>476</X>
+			<Y>0</Y>
+			<rotation>0</rotation>
+			<locked>False</locked>
+			<class>com.virtualbreadboard.sim.components.userio.NumericKeypad</class>
+				<properties>
+					<property>
+						<name>Rows</name>
+						<value>4</value>
+						<description>Number of switch rows</description>
+					</property>
+					<property>
+						<name>Columns</name>
+						<value>4</value>
+						<description>Number of switch rows</description>
+					</property>
+					<property>
+						<name>Keymask</name>
+						<value>123F456E789DA0BC</value>
+						<description>The keys to display on the key buttons</description>
+					</property>
+					<property>
+						<name>left</name>
+						<value>476</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>top</name>
+						<value>0</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>orientation</name>
+						<value>0</value>
+						<description>(visible = false)</description>
+					</property>
+					<property>
+						<name>FabID</name>
+						<value></value>
+						<description></description>
+					</property>
+				</properties>
+
+		</component>
+	</components>
+	<links>
+			<g id="NETLIST_REPRESENTATION" stroke="blue" stroke-width="1">
+			<g stroke="blue" stroke-width="1">
+				<line x1="504" y1="210" x2="504.228070175438" y2="322.039872408293" width="1" layer="" />
+				<line x1="504.228070175438" y1="322.039872408293" x2="755.783094098883" y2="322.039872408293" width="1" layer="" />
+				<line x1="755.783094098883" y1="322.039872408293" x2="755.783094098883" y2="195.703349282297" width="1" layer="" />
+				<line x1="755.783094098883" y1="195.703349282297" x2="742" y2="196" width="1" layer="" />
+			</g>
+		</g>
+		<g id="NETLABELS" stroke="" font-family="courier new" font-size="8" text-anchor="middle">
+		</g>
+		<g id="JUNCTIONS" stroke="black" fill="black">
+		</g>
+
+	</links>
+</breadboard>
