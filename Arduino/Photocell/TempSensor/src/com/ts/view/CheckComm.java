@@ -79,6 +79,9 @@ public class CheckComm extends HttpServlet {
 		}
 		
 		else
+			if (SensorOperator.isMonitoring())
+				response.sendRedirect("show.jsp");
+			else
 			request.getRequestDispatcher("param.jsp").forward(request, response);
 	} catch (NoSuchPortException e) {
 		// TODO Auto-generated catch block

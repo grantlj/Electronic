@@ -29,7 +29,7 @@ private static SerialPort sPort=null;
 private static OutputStream os=null;
 private static InputStream is=null;
 
-
+private static boolean running=false;
 
 public static boolean isPortAvailable() throws NoSuchPortException, PortInUseException, IOException
   {
@@ -44,7 +44,10 @@ public static void setSensorState(int state, int freq) throws NoSuchPortExceptio
 	
 	
 	getFirstComName();
-	
+	if (state==1) 
+		running=true;
+	else
+		running=false;
 	//byte[] bt=(String.valueOf(state)+" "+String.valueOf(freq)).getBytes();
 	//for (int i=0;i<bt.length;i++)
     //System.out.print(bt[i]);
@@ -233,8 +236,14 @@ public static void stopSensor() {
 		is=null;
 		os=null;
 		sPort=null;
+		running=false;
 	}
 	
+}
+
+public static boolean isMonitoring() {
+	// TODO Auto-generated method stub
+	return running;
 }
 }
 

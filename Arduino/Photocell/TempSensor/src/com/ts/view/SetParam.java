@@ -59,8 +59,14 @@ public class SetParam extends HttpServlet {
 			throws ServletException, IOException {
     
 	 int state=Integer.parseInt((String) request.getParameter("state"));
-     int freq=Integer.parseInt((String) request.getParameter("freq"));
-     try {
+     //int freq=Integer.parseInt((String) request.getParameter("freq"));
+     String freqstr=(String) request.getParameter("freq");
+     int freq;
+     if (freqstr==null)
+       freq=0;
+     else
+    	 freq=Integer.parseInt(freqstr);
+	 try {
 		SensorOperator.setSensorState(state,freq);
 		request.getRequestDispatcher("ShowChart").forward(request, response);
 		
