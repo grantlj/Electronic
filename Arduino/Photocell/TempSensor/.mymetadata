@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="TempSensor"
+  id="myeclipse.1394332479344"
+  context-root="/TempSensor"
+  j2ee-spec="5.0"
+  archive="TempSensor.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

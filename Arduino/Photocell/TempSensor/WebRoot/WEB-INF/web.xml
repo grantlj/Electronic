@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckComm</servlet-name>
+    <servlet-class>com.ts.view.CheckComm</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SetParam</servlet-name>
+    <servlet-class>com.ts.view.SetParam</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowChart</servlet-name>
+    <servlet-class>com.ts.view.ShowChart</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SensorSaver</servlet-name>
+    <servlet-class>com.ts.util.SensorSaver</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StopMonitor</servlet-name>
+    <servlet-class>com.ts.view.StopMonitor</servlet-class>
+  </servlet>
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>CheckComm</servlet-name>
+    <url-pattern>/view/CheckComm</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SetParam</servlet-name>
+    <url-pattern>/view/SetParam</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowChart</servlet-name>
+    <url-pattern>/view/ShowChart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SensorSaver</servlet-name>
+    <url-pattern>/view/SensorSaver</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StopMonitor</servlet-name>
+    <url-pattern>/view/StopMonitor</url-pattern>
+  </servlet-mapping>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
