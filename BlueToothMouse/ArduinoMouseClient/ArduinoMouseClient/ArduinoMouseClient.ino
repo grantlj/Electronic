@@ -33,8 +33,12 @@ void loop()
   {
     digitalWrite(ledPin,HIGH);
     flag=true;
-    str+=(char)blueToothSerial.read();
-    strlength++;
+    char c=(char)blueToothSerial.read();
+    if (c>='0' && c<='9')
+     {
+       str+=c;
+       strlength++;
+     }
     
  if (flag && strlength==9) 
  {
