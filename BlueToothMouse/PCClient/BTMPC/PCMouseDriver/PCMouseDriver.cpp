@@ -66,6 +66,30 @@ HANDLE getCommHandle()
 
 }
 
+int lastXMove = 0;
+int lastYMove = 0;
+
+void optimusXY(int* pNowX, int* pNowY, int* pLastX, int* pLastY)
+{
+	int factorX = 1, factorY = 1;
+	if (*pLastX != 0)
+	
+	if ((abs(*pNowX - *pLastX)) / (abs(*pLastX)) > 0.1)
+		factorX = 5;
+
+	if (*pLastY != 0)
+	if ((abs(*pNowY - *pLastY)) / (abs(*pLastY)) > 0.1)
+		factorY = 5;
+    
+	*pLastX = *pNowX; *pLastY = *pNowY;
+
+	*pNowX = *pNowX*factorX;
+	*pNowY = *pNowY*factorY;
+
+
+
+
+}
 
 void getOpt(Topt* popt, char* buf)
 {
@@ -74,13 +98,17 @@ void getOpt(Topt* popt, char* buf)
 	{
 	case 1:{
 			   //mouse move change.
-			   popt->arg1 = ((buf[2] - '0') * 100 + (buf[3] - '0') * 10 + (buf[4] - '0'))*3;  //x pos change.
+			   popt->arg1 = (buf[2] - '0') * 100 + (buf[3] - '0') * 10 + (buf[4] - '0');  //x pos change.
 			   if (buf[1] == '0')
 				   popt->arg1 = -popt->arg1;                                            //x pos negative change.
 
-			   popt->arg2 = ((buf[6] - '0') * 100 + (buf[7] - '0') * 10 + (buf[8] - '0'))*3;
+			   popt->arg2 = (buf[6] - '0') * 100 + (buf[7] - '0') * 10 + (buf[8] - '0');
 			   if (buf[5] == '0')
 				   popt->arg2 = -popt->arg2;
+
+			   optimusXY(&popt->arg1, &popt->arg2, &lastXMove, &lastYMove);
+
+			
 			   break;
 	}
 	case 2:{
@@ -132,6 +160,9 @@ void doOpt(Topt opt)
 	{
 			  mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, NULL);
 			  mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, NULL);
+			  Sleep(100);
+			  mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, NULL);
+			  mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, NULL);
 			  break;
 	}
 
@@ -178,6 +209,7 @@ void receiveData(PHANDLE pHcom)
 				struct Topt opt;
 				getOpt(&opt, readBuf);
 				doOpt(opt);
+				wCount = 0;
 			}
 			else
 			{

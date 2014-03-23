@@ -43,6 +43,7 @@ void loop()
    Serial.print('b');
    str="";
    strlength=0;
+   flag=false;
  }
   }
   digitalWrite(ledPin,LOW);
